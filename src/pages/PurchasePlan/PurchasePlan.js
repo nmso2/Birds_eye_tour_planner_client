@@ -30,8 +30,8 @@ const PurchasePlan = () => {
     }
 
     return (
-        <div className="flex items-center">
-            <div className="shadow-2xl m-12 p-8 lg:inline-block">
+        <div className="bg-gray-100 pt-1 lg:flex items-center">
+            <div className="shadow-2xl bg-white m-12 p-8 lg:inline-block">
                 <div>
                     <img className="mx-auto" src={plan?.img} alt="" />
                     <p className="text-3xl p-5">{plan?.name}</p>
