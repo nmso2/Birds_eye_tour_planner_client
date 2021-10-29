@@ -4,6 +4,10 @@ import Home from './pages/Home/Home/Home';
 import Header from './pages/Shared/Header/Header';
 import AuthProvider from './context/AuthProvider';
 import Login from './pages/Login/Login/Login';
+import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
+import SignUp from './pages/SignUp/SignUp';
+import NotFound from './pages/NotFound/NotFound';
+import PurchasePlan from './pages/PurchasePlan/PurchasePlan';
 
 function App() {
   return (
@@ -15,8 +19,20 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route exact path="/login">
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <PrivateRoute path="/tourPlans/:ID">
+              <PurchasePlan></PurchasePlan>
+            </PrivateRoute>
+            <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/signup">
+              <SignUp></SignUp>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
         </BrowserRouter>
