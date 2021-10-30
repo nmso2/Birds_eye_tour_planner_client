@@ -10,6 +10,9 @@ import NotFound from './pages/NotFound/NotFound';
 import PurchasePlan from './pages/PurchasePlan/PurchasePlan';
 import Footer from './pages/Shared/Footer/Footer';
 import MyPlans from './pages/MyPlans/MyPlans/MyPlans';
+import ManagePlans from './pages/ManagePlans/ManagePlans';
+import 'react-accessible-accordion/dist/fancy-example.css';
+
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
             </Route>
             <PrivateRoute path="/myPlans">
               <MyPlans></MyPlans>
+            </PrivateRoute>
+            <PrivateRoute path="/managePlans">
+              <ManagePlans></ManagePlans>
             </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
