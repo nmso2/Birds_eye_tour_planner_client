@@ -45,28 +45,26 @@ const PurchasePlan = () => {
                 <form className="max-w-xl m-4 p-10 bg-white rounded shadow-xl" onSubmit={handleSubmit(onSubmit)}>
                     <p className="text-gray-800 font-medium">Customer information</p>
                     <div className="">
-                        <label className="block text-sm text-gray-00" for="cus_name">Name</label>
+                        <label className="block text-sm text-gray-00" htmlFor="name">Name</label>
                         <input className="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" type="text" defaultValue={user.displayName} {...register("name", { required: true })} placeholder="Your Name" />
                     </div>
                     <div className="mt-2">
-                        <label className="block text-sm text-gray-600" for="cus_email">Email</label>
+                        <label className="block text-sm text-gray-600" htmlFor="email">Email</label>
                         <input className="w-full px-5  py-1 text-gray-700 bg-gray-200 rounded" type="email" defaultValue={user.email} {...register("email", { required: true })} placeholder="Your Email" />
                     </div>
                     <div className="mt-2">
-                        <label className=" block text-sm text-gray-600" for="cus_email">Address</label>
+                        <label className=" block text-sm text-gray-600" htmlFor="address">Address</label>
                         <input className="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" type="address" {...register("street", { required: true })} placeholder="Street" />
                     </div>
                     <div className="inline-block mt-2 w-1/2 pr-1">
-                        <label className="hidden block text-sm text-gray-600" for="cus_email">Country</label>
                         <input className="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" type="address" {...register("city", { required: true })} placeholder="City" />
                     </div>
                     <div className="inline-block mt-2 -mx-1 pl-1 w-1/2">
-                        <label className="hidden block text-sm text-gray-600" for="cus_email">Zip</label>
                         <input className="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" type="address" {...register("district", { required: true })} placeholder="District" />
                     </div>
 
-                    <div className="">
-                        <label className="block text-sm text-gray-600" for="cus_name">Phone</label>
+                    <div className="mt-2">
+                        <label className="block text-sm text-gray-600" htmlFor="phone">Phone</label>
                         <input className="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" type="tel" {...register("phone", { required: true })} placeholder="Phone" />
                     </div>
                     {errors.exampleRequired && <span>This field is required</span>}
