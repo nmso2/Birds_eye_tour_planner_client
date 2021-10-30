@@ -9,6 +9,7 @@ import SignUp from './pages/SignUp/SignUp';
 import NotFound from './pages/NotFound/NotFound';
 import PurchasePlan from './pages/PurchasePlan/PurchasePlan';
 import Footer from './pages/Shared/Footer/Footer';
+import MyPlans from './pages/MyPlans/MyPlans/MyPlans';
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
             <Route path="/signup">
               <SignUp></SignUp>
             </Route>
+            <PrivateRoute path="/myPlans">
+              <MyPlans></MyPlans>
+            </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
             </Route>

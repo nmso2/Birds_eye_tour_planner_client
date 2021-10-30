@@ -13,6 +13,8 @@ const PurchasePlan = () => {
     const { user } = useAuth();
 
     const onSubmit = data => {
+        data.plan_id = ID;
+        data.confirmed = false;
         fetch('https://birds-eye-tour.herokuapp.com/purchasePlan', {
             method: "POST",
             headers: {
