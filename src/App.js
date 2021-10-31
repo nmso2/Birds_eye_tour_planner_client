@@ -13,6 +13,7 @@ import MyPlans from './pages/MyPlans/MyPlans/MyPlans';
 import ManagePlans from './pages/ManagePlans/ManagePlans';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import AddPlans from './pages/AddPlans/AddPlans';
+import UserProfile from './pages/UserProfile/UserProfile';
 
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
             </Route>
             <PrivateRoute path="/myPlans">
               <MyPlans></MyPlans>
+            </PrivateRoute>
+            <PrivateRoute path="/profile">
+              <UserProfile></UserProfile>
             </PrivateRoute>
             <PrivateRoute path="/managePlans">
               <ManagePlans></ManagePlans>
