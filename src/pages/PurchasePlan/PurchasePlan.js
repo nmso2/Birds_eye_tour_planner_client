@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import Rating from 'react-rating';
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import usePlan from '../../hooks/usePlan';
@@ -37,6 +38,13 @@ const PurchasePlan = () => {
                 <div>
                     <img className="mx-auto" src={plan?.img} alt="" />
                     <p className="text-3xl p-5">{plan?.name}</p>
+                    <p>Rating: <Rating className="text-yellow-500"
+                        initialRating={plan?.rating}
+                        readonly
+                        emptySymbol="far fa-star text-warning"
+                        fullSymbol="fas fa-star text-warning"
+                    /></p>
+                    <p className="text-3xl">Cost: {plan?.cost} &#2547;</p>
                     <p className="max-w-2xl text-lg">{plan?.details}</p>
                 </div>
 
