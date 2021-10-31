@@ -11,7 +11,7 @@ import { useState } from 'react';
 const ManagePlan = (props) => {
     const { handleCancelPlan } = props;
     const [plans ] = usePlans();
-    const [purchasePlan, setPurchasePlan] = useState(props.purchasePlan);
+    const [purchasePlan] = useState(props.purchasePlan);
 
     //-------------------------------------
     const handleUpdateUser = e => {
