@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-const usePurchasePlan = () => {
+const usePurchasePlans = () => {
     const [purchasePlans, setPurchasePlans] = useState([]);
 
     useEffect(() => {
@@ -13,4 +13,4 @@ const usePurchasePlan = () => {
     return [purchasePlans, setPurchasePlans]
 };
 
-export default usePurchasePlan;
+export default usePurchasePlans;

@@ -1,9 +1,9 @@
-import usePurchasePlan from "./usePurchasePlan";
+import usePurchasePlans from "./usePurchasePlans";
 
 
 const useCancelPlan = () => {
 
-    const [purchasePlans, setPurchasePlans] = usePurchasePlan();
+    const [purchasePlans, setPurchasePlans] = usePurchasePlans();
 
     // Delete a Plan
     const handleCancelPlan = id => {
