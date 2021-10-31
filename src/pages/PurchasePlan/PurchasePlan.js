@@ -45,6 +45,7 @@ const PurchasePlan = () => {
                         fullSymbol="fas fa-star text-warning"
                     /></p>
                     <p className="text-3xl">Cost: {plan?.cost} &#2547;</p>
+                    <p className="text-3xl">Duration: {plan?.duration}</p>
                     <p className="max-w-2xl text-lg">{plan?.details}</p>
                 </div>
 

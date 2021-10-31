@@ -12,10 +12,8 @@ const ManagePlan = (props) => {
     const { handleCancelPlan } = props;
     const [plans ] = usePlans();
     const [purchasePlan, setPurchasePlan] = useState(props.purchasePlan);
+
     //-------------------------------------
-
-
-    
     const handleUpdateUser = e => {
         purchasePlan.confirmed = true;
         const url = `https://birds-eye-tour.herokuapp.com/purchasePlan/${purchasePlan._id}`
@@ -35,7 +33,6 @@ const ManagePlan = (props) => {
             })
         e.preventDefault()
     }
-
     //-------------------------------------
 
     return (

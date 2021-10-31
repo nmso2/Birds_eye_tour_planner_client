@@ -3,7 +3,7 @@ import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
 const Plans = (props) => {
-    const { name, img, details, _id, cost, rating } = props.plan;
+    const { name, img, details, _id, cost, rating, duration } = props.plan;
     return (
         <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article className="overflow-hidden rounded-lg shadow-md lg:min-h-full hover:shadow-2xl duration-500">
