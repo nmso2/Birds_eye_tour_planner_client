@@ -10,7 +10,7 @@ import useAuth from '../../../hooks/useAuth';
 const navigation = [
     { name: 'My Plans', to: '/myPlans', current: false },
     { name: 'Manage Plans', to: '/managePlans', current: false },
-    { name: 'About', to: '/about', current: false },
+    { name: 'Add Plans', to: '/addPlans', current: false },
 ]
 
 function classNames(...classes) {

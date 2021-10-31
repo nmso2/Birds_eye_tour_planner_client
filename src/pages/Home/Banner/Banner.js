@@ -1,5 +1,5 @@
 import React from 'react';
-import { CalendarIcon, UserGroupIcon, UsersIcon, EmojiHappyIcon, } from '@heroicons/react/outline';
+import { UsersIcon } from '@heroicons/react/outline';
 import './Banner.css'
 
 const Banner = () => {
