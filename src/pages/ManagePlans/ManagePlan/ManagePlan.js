@@ -6,7 +6,6 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
-import usePurchasePlan from '../../../hooks/usePurchasePlan';
 
 const ManagePlan = (props) => {
     const { plan_id, name, phone, city, district, _id } = props.purchasePlan;
