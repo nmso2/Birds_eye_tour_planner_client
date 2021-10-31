@@ -6,12 +6,37 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
+import usePurchasePlan from '../../../hooks/usePurchasePlan';
 
 const ManagePlan = (props) => {
-    const { plan_id, name, phone, confirmed, city, district, _id } = props.purchasePlan;
-    const {handleCancelPlan} = props;
-    const [plans] = usePlans();
+    const { plan_id, name, phone, city, district, _id } = props.purchasePlan;
+    let { confirmed } = props.purchasePlan;
+    const { handleCancelPlan } = props;
+    const [plans ] = usePlans();
 
+    //-------------------------------------
+    
+    const handleUpdateUser = e => {
+        props.purchasePlan.confirmed = true;
+        const url = `https://birds-eye-tour.herokuapp.com/purchasePlan/${_id}`
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(props.purchasePlan)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    alert('Updated successfully!')
+                    
+                }
+            })
+        e.preventDefault()
+    }
+
+    //-------------------------------------
 
     return (
         <div>
@@ -20,7 +45,7 @@ const ManagePlan = (props) => {
                     <p className="lg:text-3xl lg:px-5">{purchasedPlan.name}</p>
                     <p className="lg:text-lg px-5">{purchasedPlan.cost} &#2547;</p>
                     {
-                        !confirmed && <button className="border hidden border-blue-500 text-blue-500 rounded-md px-5 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-blue-600 focus:outline-none focus:shadow-outline lg:block">Confirm Plan</button>
+                        !confirmed && <button className="border hidden border-blue-500 text-blue-500 rounded-md px-5 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-blue-600 focus:outline-none focus:shadow-outline lg:block" onClick={handleUpdateUser}>Confirm Plan</button>
                     }
                     <button className="border hidden border-red-500 text-red-500 rounded-md px-5 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-red-600 focus:outline-none focus:shadow-outline lg:block" onClick={() => handleCancelPlan(_id)}>Calcel Plan</button>
                 </div>
@@ -40,7 +65,9 @@ const ManagePlan = (props) => {
                         </AccordionItemPanel>
                     </AccordionItem>
                 </Accordion>
-                <button className="border border-blue-500 text-blue-500 rounded-md px-5 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-blue-600 focus:outline-none focus:shadow-outline lg:hidden">Confirm Plan</button>
+                {
+                        !confirmed && <button className="border border-blue-500 text-blue-500 rounded-md px-5 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-blue-600 focus:outline-none focus:shadow-outline lg:hidden" onClick={handleUpdateUser}>Confirm Plan</button>
+                    }
                 <button className="border border-red-500 text-red-500 rounded-md px-5 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-red-600 focus:outline-none focus:shadow-outline lg:hidden" onClick={() => handleCancelPlan(_id)}>Calcel Plan</button>
             </div>)}
             <hr />

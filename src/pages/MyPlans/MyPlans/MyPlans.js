@@ -12,7 +12,7 @@ const MyPlans = () => {
             <div className="shadow-2xl bg-white p-5 mt-10 mx-2 lg:inline-block">
                 <h1 className="text-5xl px-2 lg:px-auto pb-5">My Plans</h1>
                 <hr />
-                {purchasePlans.filter(plan => user?.email === plan.email).map(purchasePlan => <MyPlan key={purchasePlan._id} planId={purchasePlan.plan_id} id={purchasePlan._id} handleCancelPlan={handleCancelPlan}></MyPlan>)}
+                {purchasePlans.filter(plan => user?.email === plan.email).map(purchasePlan => <MyPlan key={purchasePlan._id} planId={purchasePlan.plan_id} id={purchasePlan._id} handleCancelPlan={handleCancelPlan} confirmed={purchasePlan.confirmed}></MyPlan>)}
             </div>
         </div>
     );
