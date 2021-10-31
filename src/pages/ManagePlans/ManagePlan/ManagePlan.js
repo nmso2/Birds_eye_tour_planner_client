@@ -13,6 +13,8 @@ const ManagePlan = (props) => {
     const [plans ] = usePlans();
     const [purchasePlan, setPurchasePlan] = useState(props.purchasePlan);
     //-------------------------------------
+
+
     
     const handleUpdateUser = e => {
         purchasePlan.confirmed = true;
@@ -27,8 +29,8 @@ const ManagePlan = (props) => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
-                    alert('Updated successfully!')
-                    setPurchasePlan(props.purchasePlan);
+                    alert('Updated successfully!');
+                    window.location.reload();
                 }
             })
         e.preventDefault()
