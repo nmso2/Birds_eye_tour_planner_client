@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import logo from '../../resources/images/logo-black.png'
+import logo from '../../resources/images/logo-black.svg'
 
 const SignUp = () => {
 

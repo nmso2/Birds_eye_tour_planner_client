@@ -2,7 +2,7 @@ import { React, Fragment } from 'react'
 import { MenuIcon, UserCircleIcon, XIcon } from '@heroicons/react/outline'
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Link } from 'react-router-dom';
-import logo from '../../../resources/images/logo-black.png'
+import logo from '../../../resources/images/logo-black.svg'
 import useAuth from '../../../hooks/useAuth';
 
 

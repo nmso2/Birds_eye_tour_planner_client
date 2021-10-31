@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
-import usePurchasePlan from '../../../hooks/usePurchasePlan';
 import MyPlan from '../MyPlan/MyPlan';
 
 const MyPlans = () => {

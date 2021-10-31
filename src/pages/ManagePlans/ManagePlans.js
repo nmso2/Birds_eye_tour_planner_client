@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import useAuth from '../../hooks/useAuth';
-import usePlans from '../../hooks/usePlans';
-import usePurchasePlan from '../../hooks/usePurchasePlan';
 import ManagePlan from './ManagePlan/ManagePlan';
 
 const ManagePlans = () => {
