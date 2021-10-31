@@ -11,6 +11,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <div className="container mb-12 mx-auto px-4 md:px-12">
+            <h1 className="py-8 text-5xl">Tour Plans</h1>
                 <div className="flex flex-wrap -mx-1 lg:-mx-4">
                     {
                         plans.map(plan => <Plans key={plan._id} plan={plan}></Plans>)

@@ -1,12 +1,8 @@
 import React from 'react';
+import { CalendarIcon, UserGroupIcon, UsersIcon, EmojiHappyIcon, } from '@heroicons/react/outline';
 import './Banner.css'
 
 const Banner = () => {
-//     <style>
-//         .bannerFondo{
-//             height: 400px;
-// }
-//     </style>
     return (
         <div>
             <div>
@@ -21,15 +17,15 @@ const Banner = () => {
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 ">
 
                         <div className="p-2 sm:p-10 text-center cursor-pointer">
-                            <div className="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500  bg-white">
-                                <div className="space-y-10">
-                                    <i className="fa fa-spa"></i>
+                            <div className="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500  bg-white hover:bg-yellow-100 transition duration-500">
+                                <div>
+                                <i class="fas fa-users text-6xl"></i>
 
                                     <div className="px-6 py-4">
                                         <div className="space-y-5">
-                                            <div className="font-bold text-xl mb-2">Spa</div>
+                                            <div className="font-bold text-xl mb-2">Group Trip</div>
                                             <p className="text-gray-700 text-base">
-                                                Todo tipo de masajes y técnicas
+                                                It's awesome when you are together
                                             </p>
                                         </div>
                                     </div>
@@ -38,14 +34,16 @@ const Banner = () => {
                         </div>
 
                         <div className="p-2 sm:p-10 text-center cursor-pointer text-white">
-                            <div className="py-16 max-w-sm rounded overflow-hidden shadow-lg bg-yellow-600 hover:bg-yellow-700 transition duration-500">
-                                <div className="space-y-10">
-                                    <i className="fa fa-head-side-mask"></i>
+                            <div className="py-16 max-w-sm rounded overflow-hidden shadow-lg bg-yellow-500 hover:bg-yellow-600 transition duration-500">
+                                <div>
+                                    <div className="mx-auto w-1/4">
+                                        <UsersIcon />
+                                    </div>
                                     <div className="px-6 py-4">
                                         <div className="space-y-5">
-                                            <div className="font-bold text-xl mb-2">Bioseguridad</div>
+                                            <div className="font-bold text-xl mb-2">Couple Trip</div>
                                             <p className="text-base">
-                                                Altos estandares de bioseguridad
+                                                We have some exciting tour plans for couples
                                             </p>
                                         </div>
                                     </div>
@@ -54,15 +52,15 @@ const Banner = () => {
                         </div>
 
                         <div className="p-2 sm:p-10 text-center cursor-pointer translate-x-2">
-                            <div className="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500 bg-white ">
-                                <div className="space-y-10">
-                                    <i className="fa fa-swimmer"></i>
+                            <div className="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500 bg-white hover:bg-yellow-100 transition duration-500">
+                                <div>
+                                <i className="fas fa-hiking text-6xl"></i>
 
                                     <div className="px-6 py-4">
                                         <div className="space-y-5">
-                                            <div className="font-bold text-xl mb-2">Piscina</div>
+                                            <div className="font-bold text-xl mb-2">Solo Trip</div>
                                             <p className="text-gray-700 text-base">
-                                                Piscina temperada
+                                                You are not alone when we are with you
                                             </p>
                                         </div>
                                     </div>
