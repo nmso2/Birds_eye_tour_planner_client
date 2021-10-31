@@ -1,35 +1,12 @@
-import React, { useEffect, useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
+import useCancelPlan from '../../../hooks/useCancelPlan';
 import MyPlan from '../MyPlan/MyPlan';
 
 const MyPlans = () => {
+
     const { user } = useAuth();
-    const [purchasePlans, setPurchasePlans] = useState([]);
+    const [purchasePlans, handleCancelPlan] = useCancelPlan();
 
-    useEffect(() => {
-        fetch('https://birds-eye-tour.herokuapp.com/purchasePlan')
-            .then(res => res.json())
-            .then(data => setPurchasePlans(data))
-    }, [])
-
-    // Delete a Plan
-    const handleCancelPlan = id => {
-        const proceed = window.confirm('Are you sure, you want to cancel?')
-        if (proceed) {
-            const url = `https://birds-eye-tour.herokuapp.com/purchasePlan/${id}`
-            fetch(url, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.deletedCount > 0) {
-                        alert('Successfully Canceled the Plan!');
-                        const remainingPlans = purchasePlans.filter(purchasePlan => purchasePlan._id !== id);
-                        setPurchasePlans(remainingPlans);
-                    }
-                })
-        }
-    }
     return (
         <div className="bg-gray-100 pt-1 min-h-screen">
             <div className="shadow-2xl bg-white p-5 mt-10 mx-2 lg:inline-block">
