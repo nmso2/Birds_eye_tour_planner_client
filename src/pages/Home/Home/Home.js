@@ -1,6 +1,7 @@
 import React from 'react';
 import usePlans from '../../../hooks/usePlans';
 import Banner from '../Banner/Banner';
+import Contact from '../Contact/Contact';
 import CounterItem from '../CounterItem/CounterItem';
 import Plans from '../Plans/Plans';
 
@@ -17,6 +18,7 @@ const Home = () => {
                 </div>
             </div>
             <CounterItem></CounterItem>
+            <Contact></Contact>
         </div>
     );
 };
