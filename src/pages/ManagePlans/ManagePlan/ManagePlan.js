@@ -19,7 +19,9 @@ const ManagePlan = (props) => {
                 <div className="lg:flex items-baseline justify-end">
                     <p className="lg:text-3xl lg:px-5">{purchasedPlan.name}</p>
                     <p className="lg:text-lg px-5">{purchasedPlan.cost} &#2547;</p>
-                    <button className="border hidden border-blue-500 text-blue-500 rounded-md px-5 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-blue-600 focus:outline-none focus:shadow-outline lg:block">Confirm Plan</button>
+                    {
+                        !confirmed && <button className="border hidden border-blue-500 text-blue-500 rounded-md px-5 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-blue-600 focus:outline-none focus:shadow-outline lg:block">Confirm Plan</button>
+                    }
                     <button className="border hidden border-red-500 text-red-500 rounded-md px-5 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-red-600 focus:outline-none focus:shadow-outline lg:block" onClick={() => handleCancelPlan(_id)}>Calcel Plan</button>
                 </div>
                 <Accordion allowZeroExpanded className="py-2">
